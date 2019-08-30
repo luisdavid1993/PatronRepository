@@ -11,7 +11,7 @@ using TT.Repository.Dao.Interfaces;
 namespace TT.Negocio
 {
    public class claClienteTelefonia
-    {
+    {    
         public List<CP_ConsultarClienteTelefoniaDto> MetConsultarxCliente(Nullable<int> iCompanyId) {
             IclaClienteTelefoniaRepository _claClienteTelefoniaRepository = new claClienteTelefoniaRepository();
             return _claClienteTelefoniaRepository.MetConsultarxCliente(iCompanyId);
