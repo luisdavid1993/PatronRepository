@@ -1,0 +1,222 @@
+﻿@font-face {
+    font-family: 'Roboto';
+    src: url("/assets/fonts/Oswald-ExtraLight.eot");
+    src: url("/fonts/Roboto-Regular.ttf") format('truetype'), url("/fonts/Roboto-Bold.ttf") format('truetype'), url("/fonts/Roboto-Light.ttf") format("truetype"), url("/fonts/Roboto-Medium.ttf") format('truetype');
+}
+
+body {
+    font-family: 'Roboto', sans-serif !important
+}
+
+input,
+select,
+textarea {
+    max-width: 100% !important;
+}
+
+textarea {
+    resize: none !important;
+}
+
+a {
+    color: #EF3829;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.nav-pills-colors{
+    color: #fff;
+    background-color: #e98686;
+}
+
+.estilo-letra {
+    /*font-family: 'Roboto', sans-serif;*/
+    font-size: 16px !important;
+}
+
+.tamaño-boton{
+    height: 37px;
+    width: 142px
+}
+
+.modal .modal-dialog {
+    max-width: 600px;
+}
+
+.modal-subtitle {
+    font-size: 22px !important;
+    text-align:left;
+}
+
+.modal-texto {
+    margin: 0px;
+    text-align: left;
+}
+.modal-formulario {
+    margin: 0px;
+    padding: 5px;
+    text-align: left;
+}
+.modal .modal-header {
+    border: none;
+}
+.modal-title-izquierda {
+    text-align: left !important;
+}
+
+.modal .modal-header .modal-title {
+    font-size: 30px;
+    font-size: 1.875rem;
+    font-family: "Oswald", sans-serif;
+    line-height: 30px;
+    color: #080015;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+    .modal .modal-header button.close {
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        background: #979797;
+        border-radius: 100%;
+        opacity: 1;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+.modal .modal-header button.close span {
+            font-size: 14px;
+            display: block;
+            width: 100%;
+            line-height: 18px;
+            text-align: center;
+            color: #ffffff;
+            margin: -10px 0;
+            -webkit-font-smoothing: antialiased;
+}
+
+.modal .modal-body {
+    border: none;
+    text-align: center;
+    color: #000000;
+    font-size: 22px;
+    line-height: 30px;
+}
+.modal-incident {
+    min-width: 900px !important;
+}
+.modal .modal-footer {
+    border: none;
+    justify-content: center;
+}
+
+.modal .cancelar-modal {
+    width: 150px;
+    height: 48px;
+    background: unset;
+    font-size: 17px;
+    font-size: 1.0625rem;
+    font-family: "source-regular", sans-serif;
+    line-height: 20px;
+    color: #F15300;
+    text-align: left;
+    text-decoration: underline #F15300;
+    border: none;
+}
+
+.btn-principal {
+    width: 200px;
+    height: 48px;
+    background: #F58448;
+    border: none;
+    font-size: 17px;
+    font-size: 1.0625rem;
+    font-family: "source-bold", sans-serif;
+    line-height: 22px;
+    color: #ffffff;
+    text-align: left;
+    text-align: center;
+}
+
+    .btn-principal:hover {
+        background: #F15300;
+    }
+.btn-left {
+    justify-content: flex-end !important;
+}
+.label-sin-padding {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.alinear{
+    margin-left: 94%
+}
+
+.degrade-azul{
+    color: white !important;
+    background: linear-gradient(40deg,#45cafc,#303f9f) !important;
+}
+.bg-gris {
+    /*color: white;*/
+    background: Gray;
+}
+
+.btn-sombra {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.btn-redondo {
+    border-radius: 15em !important;    
+}
+
+.bg-red {
+    background: #EF3829;
+}
+
+.lineas-canceled {
+    padding: 0%;
+    background-color: #f7f7be;
+    width: 13%;
+}
+
+.lineas-selected {
+    padding: 0%;
+    background-color: #d3d3d3;
+    width: 13%;
+}
+
+.div-show {
+    display: block
+}
+
+.div-hide {
+    display: none;
+}
+
+.div-grupo-centrex {
+    font-size: 13px;
+    background-color:lightblue;
+    border-radius: 2px;
+    z-index: 2;
+    position: absolute;
+    width: 225px;
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.div-call-source {
+    font-size: 13px;
+    background-color: lightblue;
+    border-radius: 2px;
+    z-index: 2;
+    position: absolute;
+    width: 225px;
+    height: 200px;
+    overflow-y: scroll;
+}

@@ -1,0 +1,213 @@
+﻿@model TT.WebTab.Models.TiposLineaEdicionModel
+
+<div class="container">
+    <br />
+    <div class="row">
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.IdProducto, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-2">
+            @Html.EditorFor(model => model.IdProducto, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
+        </div>
+        <div class="col-md-8">
+            @Html.EditorFor(model => model.NombreProducto, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-3">
+            @Html.LabelFor(model => model.TipoDeLinea, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-6">
+            @Html.DropDownListFor(model => model.TipoDeLinea, ViewBag.lista as List<SelectListItem>, "-- Seleccione --", new { @class = "form-control" })
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.CampoUno, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-5">
+            @Html.DropDownListFor(model => model.CampoUno, ViewBag.lista as List<SelectListItem>, "-- Seleccione --", new { @class = "form-control" })
+        </div>
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.Puerto, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-5">
+            @Html.EditorFor(model => model.Puerto, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.CanalesActivos, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-5">
+            @Html.EditorFor(model => model.CanalesActivos, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
+        </div>
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.NumeroInicial, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-5">
+            @Html.DropDownListFor(model => model.NumeroInicial, ViewBag.lista as List<SelectListItem>, "-- Seleccione --", new { @class = "form-control" })
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.CampoDos, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-5">
+            @Html.DropDownListFor(model => model.CampoDos, ViewBag.lista as List<SelectListItem>, "-- Seleccione --", new { @class = "form-control" })
+        </div>
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.NumeroFinal, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-5">
+            @Html.DropDownListFor(model => model.NumeroFinal, ViewBag.lista as List<SelectListItem>, "-- Seleccione --", new { @class = "form-control" })
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.CampoTres, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-5">
+            @Html.DropDownListFor(model => model.CampoTres, ViewBag.lista as List<SelectListItem>, "-- Seleccione --", new { @class = "form-control" })
+        </div>
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.Troncal, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-5">
+            @Html.EditorFor(model => model.Troncal, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.DireccionIp, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-5">
+            @Html.DropDownListFor(model => model.DireccionIp, ViewBag.lista as List<SelectListItem>, "-- Seleccione --", new { @class = "form-control" })
+        </div>
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.ShortNumber, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-5">
+            @Html.EditorFor(model => model.ShortNumber, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.Ciudad, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-5">
+            @Html.DropDownListFor(model => model.Ciudad, ViewBag.lista as List<SelectListItem>, "-- Seleccione --", new { @class = "form-control" })
+        </div>
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.Exento, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-5">
+            @Html.DropDownListFor(model => model.Exento, ViewBag.lista as List<SelectListItem>, "-- Seleccione --", new { @class = "form-control" })
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.SubRed, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-5">
+            @Html.DropDownListFor(model => model.SubRed, ViewBag.lista as List<SelectListItem>, "-- Seleccione --", new { @class = "form-control" })
+        </div>
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.SolicitudOperacion, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-5">
+            @Html.DropDownListFor(model => model.SolicitudOperacion, ViewBag.lista as List<SelectListItem>, "-- Seleccione --", new { @class = "form-control" })
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.Publicar, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-5">
+            @Html.DropDownListFor(model => model.Publicar, ViewBag.lista as List<SelectListItem>, "-- Seleccione --", new { @class = "form-control" })
+        </div>
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.ResultadoOpercion, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-5">
+            @Html.DropDownListFor(model => model.ResultadoOpercion, ViewBag.lista as List<SelectListItem>, "-- Seleccione --", new { @class = "form-control" })
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.ModeloEquipo, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-5">
+            @Html.DropDownListFor(model => model.ModeloEquipo, ViewBag.lista as List<SelectListItem>, "-- Seleccione --", new { @class = "form-control" })
+        </div>
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.CanalesEntrantes, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-5">
+            @Html.EditorFor(model => model.CanalesEntrantes, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.Entrada, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-5">
+            @Html.DropDownListFor(model => model.Entrada, ViewBag.lista as List<SelectListItem>, "-- Seleccione --", new { @class = "form-control" })
+        </div>
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.CanalesSalientes, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-5">
+            @Html.EditorFor(model => model.CanalesSalientes, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.ComparteNumeracion, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-5">
+            @Html.DropDownListFor(model => model.ComparteNumeracion, ViewBag.lista as List<SelectListItem>, "-- Seleccione --", new { @class = "form-control" })
+        </div>
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.ComentarioResultado, htmlAttributes: new { @class = "control-label " })
+        </div>
+        <div class="col-md-5">
+            @Html.TextAreaFor(model => model.ComentarioResultado, new { @class = "form-control", rows = "5" })
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-md-6 text-center p-3">
+            @Html.ActionLink("Cancelar", "tiposLinea", null,null, new { @class= "btn btn-outline-danger", style="width:50%"})
+        </div>
+        <div class="col-md-6 text-center p-3">
+            <input type="submit" value="Guardar" class="btn btn-outline-danger" style="width:50%"/>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,177 @@
+﻿@model  TT.WebTab.Models.DetalleDatosProductoModel
+<div>
+    <table class="table table-responsive">
+        <thead class="table-light bg-gris">
+            <tr>
+                <th>
+                    <input type="checkbox" class="selectAll" value="" onclick="selectAll()"/>
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.IdVenta)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.CampoUno)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.CanalesActivos)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.CampoDos)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.CampoTres)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.DireccionIp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.Ciudad)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.SubRed)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.Publicar)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.ComparteNumeracion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.ModeloEquipo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.Entrada)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.Puerto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.NumeroInicial)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.NumeroFinal)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.Troncal)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.ShortNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.Exento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.SolicitudOperacion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.ResultadoOpercion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.ComentarioResultado)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.CanalesEntrantes)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model._TiposLineaEdicion.CanalesSalientes)
+                </th>
+            </tr>
+        </thead>
+        <tbody class="">
+            @foreach (var item in Model._ListTiposLineaEdicion) {
+            <tr id="item_@item.IdTipoLinea" class="selectItem">
+                <th>
+                    @Html.CheckBoxFor(modelItem => item.TipoLineaSelected, new { @class = "input" + @item.IdTipoLinea, @onclick = "selectItem("+ Json.Encode(item) +");" })
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TipoDeLinea)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CampoUno)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CanalesActivos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CampoDos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DireccionIp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ciudad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SubRed)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Publicar)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ComparteNumeracion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModeloEquipo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Entrada)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Puerto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumeroInicial)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumeroFinal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Troncal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShortNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Exento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SolicitudOperacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ResultadoOpercion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ComentarioResultado)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CanalesEntrantes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CanalesSalientes)
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    <div class="row">
+        <div class="row col-md-3" style="height:3%">
+            <div class="lineas-canceled"></div>
+            <div class="col-md-10">Lineas canceladas</div>
+
+        </div>
+
+        <div class="col-md-1"></div>
+
+        <div class="row col-md-4" style="height:3%">
+            <div class="lineas-selected"></div>
+            <div class="col-md-10">Lineas Seleccionadas</div>
+            
+        </div>
+    </div>
+</div>
+
+<script>
+    var modelo = @Html.Raw(Json.Encode(Model._ListTiposLineaEdicion));
+</script>
+
+<script src="~/Scripts/tabScripts/tablaTiposLinea.js"></script>

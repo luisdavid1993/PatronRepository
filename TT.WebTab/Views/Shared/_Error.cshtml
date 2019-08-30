@@ -1,0 +1,29 @@
+﻿@model TT.WebTab.Models.ErrorGeneralModel
+@Scripts.Render("~/bundles/jquery")
+<link href="~/Content/Estilos.css" rel="stylesheet" />
+<div class="modal fade" id="modalValidaError" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h5 class="modal-title" id="exampleModalLabel">ERROR: @Model.lugarError </h5>
+            </div>
+            <div class="modal-body">Se presentó un error,contacte al administrador del sistema!.</div>
+            <div class="modal-footer">
+                <button class="btn-principal" type="button" data-dismiss="modal">  Cerrar </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+         if ('@Model.lugarError' != "") {
+                $('#modalValidaError').modal({ show: true });
+
+        }
+    });
+</script>
+
+
+

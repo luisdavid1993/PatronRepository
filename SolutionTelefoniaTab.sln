@@ -1,0 +1,97 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TT.WebTab", "TT.WebTab\TT.WebTab.csproj", "{B58AA5A2-9350-43A5-8ED9-E8F82150FE2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TT.Utils", "TT.Utils\TT.Utils.csproj", "{9FCC2DB9-E8AB-4E07-8E17-3AAFE16CFA91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TT.AdoNetEntity", "TT.AdoNetEntity\TT.AdoNetEntity.csproj", "{87DA854E-7F0E-49EC-B920-1E0981D8D282}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TT.Dto", "TT.Dto\TT.Dto.csproj", "{710A3C9A-BC35-4E1B-A355-6C35F18257FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TT.Bussines", "TT.Negocio\TT.Bussines.csproj", "{FF94FC72-315D-42D3-B8EE-894FAA6EBDD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TT.Repository", "TT.Repository\TT.Repository.csproj", "{0B4C1346-0941-4EB5-A346-B5120969CB92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TT.UnitTest", "TestInicio\TT.UnitTest.csproj", "{561B4671-05AF-4A64-9ECF-DBA92AB9A81F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TT.Proxy", "TT.Proxy\TT.Proxy.csproj", "{D487863C-0D1D-4998-A7FF-D44EBBC90670}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B58AA5A2-9350-43A5-8ED9-E8F82150FE2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B58AA5A2-9350-43A5-8ED9-E8F82150FE2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B58AA5A2-9350-43A5-8ED9-E8F82150FE2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B58AA5A2-9350-43A5-8ED9-E8F82150FE2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FCC2DB9-E8AB-4E07-8E17-3AAFE16CFA91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FCC2DB9-E8AB-4E07-8E17-3AAFE16CFA91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FCC2DB9-E8AB-4E07-8E17-3AAFE16CFA91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FCC2DB9-E8AB-4E07-8E17-3AAFE16CFA91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87DA854E-7F0E-49EC-B920-1E0981D8D282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87DA854E-7F0E-49EC-B920-1E0981D8D282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87DA854E-7F0E-49EC-B920-1E0981D8D282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87DA854E-7F0E-49EC-B920-1E0981D8D282}.Release|Any CPU.Build.0 = Release|Any CPU
+		{710A3C9A-BC35-4E1B-A355-6C35F18257FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{710A3C9A-BC35-4E1B-A355-6C35F18257FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{710A3C9A-BC35-4E1B-A355-6C35F18257FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{710A3C9A-BC35-4E1B-A355-6C35F18257FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF94FC72-315D-42D3-B8EE-894FAA6EBDD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF94FC72-315D-42D3-B8EE-894FAA6EBDD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF94FC72-315D-42D3-B8EE-894FAA6EBDD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF94FC72-315D-42D3-B8EE-894FAA6EBDD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B4C1346-0941-4EB5-A346-B5120969CB92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B4C1346-0941-4EB5-A346-B5120969CB92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B4C1346-0941-4EB5-A346-B5120969CB92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B4C1346-0941-4EB5-A346-B5120969CB92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{561B4671-05AF-4A64-9ECF-DBA92AB9A81F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{561B4671-05AF-4A64-9ECF-DBA92AB9A81F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{561B4671-05AF-4A64-9ECF-DBA92AB9A81F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{561B4671-05AF-4A64-9ECF-DBA92AB9A81F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D487863C-0D1D-4998-A7FF-D44EBBC90670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D487863C-0D1D-4998-A7FF-D44EBBC90670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D487863C-0D1D-4998-A7FF-D44EBBC90670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D487863C-0D1D-4998-A7FF-D44EBBC90670}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7DC1A1D-98B9-43B8-9D00-4B014BEDA5EA}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://172.18.169.36:8661/claro
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = TT.WebTab\\TT.WebTab.csproj
+		SccProjectName1 = TT.WebTab
+		SccLocalPath1 = TT.WebTab
+		SccProjectUniqueName2 = TT.Utils\\TT.Utils.csproj
+		SccProjectName2 = TT.Utils
+		SccLocalPath2 = TT.Utils
+		SccProjectUniqueName3 = TT.AdoNetEntity\\TT.AdoNetEntity.csproj
+		SccProjectName3 = TT.AdoNetEntity
+		SccLocalPath3 = TT.AdoNetEntity
+		SccProjectUniqueName4 = TT.Dto\\TT.Dto.csproj
+		SccProjectName4 = TT.Dto
+		SccLocalPath4 = TT.Dto
+		SccProjectUniqueName5 = TT.Repository\\TT.Repository.csproj
+		SccProjectName5 = TT.Repository
+		SccLocalPath5 = TT.Repository
+		SccProjectUniqueName6 = TT.Negocio\\TT.Bussines.csproj
+		SccProjectName6 = TT.Negocio
+		SccLocalPath6 = TT.Negocio
+		SccProjectUniqueName7 = TestInicio\\TT.UnitTest.csproj
+		SccProjectName7 = TestInicio
+		SccLocalPath7 = TestInicio
+		SccProjectUniqueName8 = TT.Proxy\\TT.Proxy.csproj
+		SccProjectName8 = TT.Proxy
+		SccLocalPath8 = TT.Proxy
+	EndGlobalSection
+EndGlobal

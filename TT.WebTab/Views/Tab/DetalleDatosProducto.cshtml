@@ -1,0 +1,117 @@
+﻿@using TT.WebTab.Models
+@model TT.WebTab.Models.DetalleDatosProductoModel
+@{
+    /**/
+
+    ViewBag.Title = "DetalleDatosProducto";
+    VozIncidentModel _VozIncidentDto = ViewBag._VozIncidentDto;
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <br />
+    <div class="container badge-light estilo-letra">
+        <div class="row">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="col-md-2">
+                @Html.LabelFor(model => model._DetalleHeaderProductsModel.VCHNOMBREESTRATO, htmlAttributes: new { @class = "control-label " })
+                @Html.EditorFor(model => model._DetalleHeaderProductsModel.VCHNOMBREESTRATO, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model._DetalleHeaderProductsModel.VCHNOMBREESTRATO, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model._DetalleHeaderProductsModel.VCHNOMBREESTRATO)
+            </div>
+
+            <div class="col-md-2">
+                @Html.LabelFor(model => model._DetalleHeaderProductsModel.ICOMPANYID, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model._DetalleHeaderProductsModel.ICOMPANYID, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model._DetalleHeaderProductsModel.ICOMPANYID, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model._DetalleHeaderProductsModel.ICOMPANYID)
+            </div>
+
+            <div class="col-md-3 ">
+                @Html.LabelFor(model => model._DetalleHeaderProductsModel.VCHPARAMETERDESCCIUDAD, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model._DetalleHeaderProductsModel.VCHPARAMETERDESCCIUDAD, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model._DetalleHeaderProductsModel.VCHPARAMETERDESCCIUDAD, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model._DetalleHeaderProductsModel.VCHPARAMETERDESCCIUDAD)
+            </div>
+
+            <div class="col-md-2 ">
+                @Html.LabelFor(model => model._DetalleHeaderProductsModel.IVENTAID, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model._DetalleHeaderProductsModel.IVENTAID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model._DetalleHeaderProductsModel.IVENTAID, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="col-md-3 text-center p-3">
+                <input type="submit" value="Modificar" class="btn btn-outline-danger btn-sombra  btn-redondo" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                @Html.LabelFor(model => model._DetalleHeaderProductsModel.VCHDESCRIPCIONUSO, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model._DetalleHeaderProductsModel.VCHDESCRIPCIONUSO, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model._DetalleHeaderProductsModel.VCHDESCRIPCIONUSO, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model._DetalleHeaderProductsModel.VCHDESCRIPCIONUSO)
+            </div>
+            <div class="col-md-5">
+                @Html.LabelFor(model => model._DetalleHeaderProductsModel.VCHCOMPANYNAME, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model._DetalleHeaderProductsModel.VCHCOMPANYNAME, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model._DetalleHeaderProductsModel.VCHCOMPANYNAME, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model._DetalleHeaderProductsModel.VCHCOMPANYNAME)
+            </div>
+            <div class="col-md-2">
+                @Html.LabelFor(model => model._DetalleHeaderProductsModel.IUSOSERVICIOID, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model._DetalleHeaderProductsModel.IUSOSERVICIOID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model._DetalleHeaderProductsModel.IUSOSERVICIOID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                @Html.LabelFor(model => model._DetalleHeaderProductsModel.VCHDATAVALUECIUDAD, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model._DetalleHeaderProductsModel.VCHDATAVALUECIUDAD, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model._DetalleHeaderProductsModel.VCHDATAVALUECIUDAD, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-2">
+                @Html.LabelFor(model => model._DetalleHeaderProductsModel.VCHCOMENTARIOS, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.EditorFor(model => model._DetalleHeaderProductsModel.VCHCOMENTARIOS, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model._DetalleHeaderProductsModel.VCHCOMENTARIOS, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-3">
+                @Html.LabelFor(model => model._DetalleHeaderProductsModel.VCHPARAMETERDESCCIUDAD, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model._DetalleHeaderProductsModel.VCHPARAMETERDESCCIUDAD, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model._DetalleHeaderProductsModel.VCHPARAMETERDESCCIUDAD, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model._DetalleHeaderProductsModel.VCHPARAMETERDESCCIUDAD)
+            </div>
+            <div class="col-md-2">
+                @Html.LabelFor(model => model._DetalleHeaderProductsModel.VCHCOMPANYNAMELOCAL, htmlAttributes: new { @class = "control-label" })
+                @Html.EditorFor(model => model._DetalleHeaderProductsModel.VCHCOMPANYNAMELOCAL, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model._DetalleHeaderProductsModel.VCHCOMPANYNAMELOCAL, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model._DetalleHeaderProductsModel.VCHCOMPANYNAMELOCAL)
+            </div>
+            <div class="col-md-3">
+                @Html.LabelFor(model => model._DetalleHeaderProductsModel.ICOMPANYIDLOCAL, htmlAttributes: new { @class = "control-labels" })
+                @Html.EditorFor(model => model._DetalleHeaderProductsModel.ICOMPANYIDLOCAL, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model._DetalleHeaderProductsModel.ICOMPANYIDLOCAL, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model._DetalleHeaderProductsModel.ICOMPANYIDLOCAL)
+                @Html.HiddenFor(model => model._DetalleHeaderProductsModel.IPRODUCTID)
+            </div>
+        </div>
+        <br />
+    </div>
+
+    if (@Model._DetalleHeaderProductsModel != null){
+        {Html.RenderAction("tiposLinea", @Model);}
+    }
+
+}
+@if (@Model._DetalleHeaderProductsModel == null)
+{
+    @Html.Partial("_IncidenteRelacionar", _VozIncidentDto)
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+}

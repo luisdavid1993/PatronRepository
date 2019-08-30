@@ -1,0 +1,88 @@
+﻿@model TT.WebTab.Models.VozIncidentModel
+
+@Scripts.Render("~/bundles/jquery")
+<link href="~/Content/Estilos.css" rel="stylesheet" />
+<div class="modal fade" id="modalIncidenteRelacionar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
+    <div class="modal-dialog modal-dialog-centered modal-incident" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Información del incidente a relacionar</h5>
+            </div>
+            @using (Html.BeginForm("VozIncident", "Tab", FormMethod.Post))
+            {
+                <div class="modal-body" style="border: #f5f0f0 2px solid;">
+
+                    @Html.AntiForgeryToken()
+
+                    <div class="container border bg-light rounded p-2 estilo-letra estilo-tamanio-letra">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h6>Información del incidente</h6>
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <div class="form-group col-md-12 row">
+                                    <div class="col-md-4 label-sin-padding">
+                                        @Html.LabelFor(model => model._IdAsunto, "ID del asunto: ", htmlAttributes: new { @class = "col-form-label text-white bg-danger rounded", @style= "width: 100%;" })
+                                    </div>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model._IdAsunto, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model._IdAsunto, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-12 row">
+                                    <div class="col-md-4 label-sin-padding">
+                                        @Html.LabelFor(model => model._IdProducto, "ID del producto: ", htmlAttributes: new { @class = "col-form-label text-white bg-danger rounded", @style = "width: 100%;" })
+                                    </div>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model._IdProducto, new { htmlAttributes = new { @class = "form-control", disabled="disabeld"} })
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-12 row">
+                                    <div class="col-md-4 label-sin-padding">
+                                        @Html.LabelFor(model => model._CodigoEnlace, "Codigo enlace: ", htmlAttributes: new { @class = "col-form-label text-white bg-danger rounded", @style = "width: 100%;" })
+                                    </div>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model._CodigoEnlace, new { htmlAttributes = new { @class = "form-control", disabled="disabled"} })
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-12 row">
+                                    <div class="col-md-4 label-sin-padding">
+                                        @Html.LabelFor(model => model._Producto, "Producto: ", htmlAttributes: new { @class = "col-form-label text-white bg-danger rounded", @style = "width: 100%;" })
+                                    </div>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model._Producto, new { htmlAttributes = new { @class = "form-control", disabled="disabled"} })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4 row">
+                                <h6>
+                                    @Html.LabelFor(model => model._Comentarios, "Comentarios", htmlAttributes: new { @class = "col-form-label col-md-12" })
+                                </h6>
+                                @Html.TextAreaFor(model => model._Comentarios, new { @class = "form-control", rows = "7" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <input type="submit" value="Editar Información" class="btn btn-danger" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#modalIncidenteRelacionar').modal({ show: true });
+    });
+</script>
+
+
+
+

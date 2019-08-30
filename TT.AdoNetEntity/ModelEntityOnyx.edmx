@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="OnyxModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="CP_ACTUALIZARDATOSPRODUCTO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="P_IDATOSPRODUCTOID" Type="int" Mode="In" />
+          <Parameter Name="P_IPRODUCTID" Type="char" Mode="In" />
+          <Parameter Name="P_CHPRODUCTNUMBER" Type="char" Mode="In" />
+          <Parameter Name="P_BENVIOPUBLICOLOCAL" Type="bit" Mode="In" />
+          <Parameter Name="P_BENVIOPUBLICOLD" Type="bit" Mode="In" />
+          <Parameter Name="P_BENVIOCORPLOCAL" Type="bit" Mode="In" />
+          <Parameter Name="P_BENVIOCORPLD" Type="bit" Mode="In" />
+          <Parameter Name="P_ICOMPANYID" Type="int" Mode="In" />
+          <Parameter Name="P_ICOMPANYLOCALID" Type="int" Mode="In" />
+          <Parameter Name="P_VCHCOMENTARIOS" Type="varchar" Mode="In" />
+          <Parameter Name="P_TIRECORDSTATUS" Type="tinyint" Mode="In" />
+          <Parameter Name="P_IVENTAID" Type="int" Mode="In" />
+          <Parameter Name="P_IESTRATOCIUDADID" Type="int" Mode="In" />
+          <Parameter Name="P_IUSOSERVICIOID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CP_ConsultaGrupoCentrex" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="CP_ConsultarClienteTelefonia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="iCompanyId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CP_CONSULTARDATOSPRODUCTO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="P_IDATOSPRODUCTOID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CP_ConsultarUso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="CP_ConsultarValoresCampoProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="chProductNumber" Type="char" Mode="In" />
+          <Parameter Name="chCampo" Type="char" Mode="In" />
+          <Parameter Name="cValidarRepetidos" Type="char" Mode="In" />
+          <Parameter Name="iValorIdPadre" Type="int" Mode="In" />
+          <Parameter Name="iCompanyId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CP_ConsultaSerialNumber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="iProductId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CP_ConsultavchCallSource" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="CP_Cuenta_Incident_iIncidentId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="iIncidentId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CP_DatosProductoIncident_iIncidentId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="iIncidentId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CP_iIncidentCategory_Incident_iIncidentId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="iIncidentId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CP_InsertarDatosProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IPRODUCTID" Type="char" Mode="In" />
+          <Parameter Name="CHPRODUCTNUMBER" Type="char" Mode="In" />
+          <Parameter Name="BENVIOPUBLICOLOCAL" Type="bit" Mode="In" />
+          <Parameter Name="BENVIOPUBLICOLD" Type="bit" Mode="In" />
+          <Parameter Name="BENVIOCORPLOCAL" Type="bit" Mode="In" />
+          <Parameter Name="BENVIOCORPLD" Type="bit" Mode="In" />
+          <Parameter Name="ICOMPANYID" Type="int" Mode="In" />
+          <Parameter Name="ICOMPANYLOCALID" Type="int" Mode="In" />
+          <Parameter Name="VCHCOMENTARIOS" Type="varchar" Mode="In" />
+          <Parameter Name="TIRECORDSTATUS" Type="tinyint" Mode="In" />
+          <Parameter Name="IVENTAID" Type="int" Mode="In" />
+          <Parameter Name="IESTRATOCIUDADID" Type="int" Mode="In" />
+          <Parameter Name="IUSOSERVICIOID" Type="int" Mode="In" />
+          <Parameter Name="IDATOSPRODUCTOID" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="CP_iOwnerId_Incident_iIncidentId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="iIncidentId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CP_iStatusId_Incident_iIncidentId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="iIncidentId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CP_LLenarTablaAsuntosModificaron" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="iDatosProductoId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CP_LogErrorTabTelefonia_Insertar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="vchUsuario" Type="varchar" Mode="In" />
+          <Parameter Name="vchMetodo" Type="varchar" Mode="In" />
+          <Parameter Name="vchMessageError" Type="varchar(max)" Mode="In" />
+          <Parameter Name="vchInnerTracerError" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="CP_ParametrosXProducto_ProductNumber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="chProductNumber" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="CP_Product_Master_iIncidentId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="iIncidentId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="CRMCP_BuscarTelefonia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="iIncidentCategory" Type="int" Mode="In" />
+          <Parameter Name="iIncidentId" Type="int" Mode="In" />
+          <Parameter Name="vchSerialNumber" Type="varchar" Mode="In" />
+          <Parameter Name="iDatosProductoId" Type="int" Mode="InOut" />
+        </Function>
+        <EntityContainer Name="OnyxModelStoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OnyxModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="OnyxEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="CP_InsertarDatosProducto">
+            <Parameter Name="IPRODUCTID" Mode="In" Type="String" />
+            <Parameter Name="CHPRODUCTNUMBER" Mode="In" Type="String" />
+            <Parameter Name="BENVIOPUBLICOLOCAL" Mode="In" Type="Boolean" />
+            <Parameter Name="BENVIOPUBLICOLD" Mode="In" Type="Boolean" />
+            <Parameter Name="BENVIOCORPLOCAL" Mode="In" Type="Boolean" />
+            <Parameter Name="BENVIOCORPLD" Mode="In" Type="Boolean" />
+            <Parameter Name="ICOMPANYID" Mode="In" Type="Int32" />
+            <Parameter Name="ICOMPANYLOCALID" Mode="In" Type="Int32" />
+            <Parameter Name="VCHCOMENTARIOS" Mode="In" Type="String" />
+            <Parameter Name="TIRECORDSTATUS" Mode="In" Type="Byte" />
+            <Parameter Name="IVENTAID" Mode="In" Type="Int32" />
+            <Parameter Name="IESTRATOCIUDADID" Mode="In" Type="Int32" />
+            <Parameter Name="IUSOSERVICIOID" Mode="In" Type="Int32" />
+            <Parameter Name="IDATOSPRODUCTOID" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="CP_CONSULTARDATOSPRODUCTO" ReturnType="Collection(OnyxModel.CP_CONSULTARDATOSPRODUCTO_Result)">
+          <Parameter Name="P_IDATOSPRODUCTOID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="CP_ConsultarClienteTelefonia" ReturnType="Collection(OnyxModel.CP_ConsultarClienteTelefonia_Result)">
+          <Parameter Name="iCompanyId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="CP_LogErrorTabTelefonia_Insertar">
+            <Parameter Name="vchUsuario" Mode="In" Type="String" />
+            <Parameter Name="vchMetodo" Mode="In" Type="String" />
+            <Parameter Name="vchMessageError" Mode="In" Type="String" />
+            <Parameter Name="vchInnerTracerError" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="CP_ConsultarUso" ReturnType="Collection(OnyxModel.CP_ConsultarUso_Result)" />
+          <FunctionImport Name="CP_ACTUALIZARDATOSPRODUCTO">
+            <Parameter Name="P_IDATOSPRODUCTOID" Mode="In" Type="Int32" />
+            <Parameter Name="P_IPRODUCTID" Mode="In" Type="String" />
+            <Parameter Name="P_CHPRODUCTNUMBER" Mode="In" Type="String" />
+            <Parameter Name="P_BENVIOPUBLICOLOCAL" Mode="In" Type="Boolean" />
+            <Parameter Name="P_BENVIOPUBLICOLD" Mode="In" Type="Boolean" />
+            <Parameter Name="P_BENVIOCORPLOCAL" Mode="In" Type="Boolean" />
+            <Parameter Name="P_BENVIOCORPLD" Mode="In" Type="Boolean" />
+            <Parameter Name="P_ICOMPANYID" Mode="In" Type="Int32" />
+            <Parameter Name="P_ICOMPANYLOCALID" Mode="In" Type="Int32" />
+            <Parameter Name="P_VCHCOMENTARIOS" Mode="In" Type="String" />
+            <Parameter Name="P_TIRECORDSTATUS" Mode="In" Type="Byte" />
+            <Parameter Name="P_IVENTAID" Mode="In" Type="Int32" />
+            <Parameter Name="P_IESTRATOCIUDADID" Mode="In" Type="Int32" />
+            <Parameter Name="P_IUSOSERVICIOID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="CRMCP_BuscarTelefonia">
+            <Parameter Name="iIncidentCategory" Mode="In" Type="Int32" />
+            <Parameter Name="iIncidentId" Mode="In" Type="Int32" />
+            <Parameter Name="vchSerialNumber" Mode="In" Type="String" />
+            <Parameter Name="iDatosProductoId" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="CP_Cuenta_Incident_iIncidentId" ReturnType="Collection(Int32)">
+          <Parameter Name="iIncidentId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="CP_DatosProductoIncident_iIncidentId" ReturnType="Collection(Int32)">
+          <Parameter Name="iIncidentId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="CP_iIncidentCategory_Incident_iIncidentId" ReturnType="Collection(Int32)">
+          <Parameter Name="iIncidentId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="CP_iOwnerId_Incident_iIncidentId" ReturnType="Collection(Int32)">
+          <Parameter Name="iIncidentId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="CP_iStatusId_Incident_iIncidentId" ReturnType="Collection(Int32)">
+          <Parameter Name="iIncidentId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="CP_Product_Master_iIncidentId" ReturnType="Collection(OnyxModel.CP_Product_Master_iIncidentId_Result)">
+          <Parameter Name="iIncidentId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="CP_ConsultaSerialNumber" ReturnType="Collection(OnyxModel.CP_ConsultaSerialNumber_Result)">
+          <Parameter Name="iProductId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="CP_ConsultaGrupoCentrex" ReturnType="Collection(String)" />
+          <FunctionImport Name="CP_ConsultavchCallSource" ReturnType="Collection(String)" />
+          <FunctionImport Name="CP_ConsultarValoresCampoProducto">
+            <Parameter Name="chProductNumber" Mode="In" Type="String" />
+            <Parameter Name="chCampo" Mode="In" Type="String" />
+            <Parameter Name="cValidarRepetidos" Mode="In" Type="String" />
+            <Parameter Name="iValorIdPadre" Mode="In" Type="Int32" />
+            <Parameter Name="iCompanyId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="CP_LLenarTablaAsuntosModificaron" ReturnType="Collection(OnyxModel.CP_LLenarTablaAsuntosModificaron_Result)">
+            <Parameter Name="iDatosProductoId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="CP_ParametrosXProducto_ProductNumber" ReturnType="Collection(OnyxModel.CP_ParametrosXProducto_ProductNumber_Result)">
+            <Parameter Name="chProductNumber" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="CP_CONSULTARDATOSPRODUCTO_Result">
+          <Property Type="String" Name="IPRODUCTID" Nullable="false" MaxLength="10" />
+          <Property Type="Boolean" Name="BENVIOPUBLICOLOCAL" Nullable="false" />
+          <Property Type="Boolean" Name="BENVIOPUBLICOLD" Nullable="false" />
+          <Property Type="Boolean" Name="BENVIOCORPLOCAL" Nullable="false" />
+          <Property Type="Boolean" Name="BENVIOCORPLD" Nullable="false" />
+          <Property Type="String" Name="VCHCOMENTARIOS" Nullable="true" MaxLength="900" />
+          <Property Type="Byte" Name="TIRECORDSTATUS" Nullable="false" />
+          <Property Type="Int32" Name="IVENTAID" Nullable="true" />
+          <Property Type="Int32" Name="ICOMPANYID" Nullable="true" />
+          <Property Type="String" Name="VCHCOMPANYNAME" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="ICOMPANYIDLOCAL" Nullable="true" />
+          <Property Type="String" Name="VCHCOMPANYNAMELOCAL" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="VCHDATAVALUECIUDAD" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="VCHPARAMETERDESCCIUDAD" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="IESTRATOCIUDADID" Nullable="false" />
+          <Property Type="String" Name="VCHNOMBREESTRATO" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="IUSOSERVICIOID" Nullable="false" />
+          <Property Type="String" Name="VCHDESCRIPCIONUSO" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="VCHCODIGOREGION" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="TIPOTELEFONIA" Nullable="true" MaxLength="6" />
+        </ComplexType>
+        <ComplexType Name="CP_ConsultarClienteTelefonia_Result">
+          <Property Type="Int32" Name="iCompanyId" Nullable="false" />
+          <Property Type="String" Name="vchGrupoCentrex" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="vchCallSource" Nullable="true" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="CP_ConsultarUso_Result">
+          <Property Type="Int32" Name="iEstratoID" Nullable="false" />
+          <Property Type="String" Name="vchDescripcion" Nullable="false" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="CP_Product_Master_iIncidentId_Result">
+          <Property Type="String" Name="chProductNumber" Nullable="false" MaxLength="20" />
+          <Property Type="Int32" Name="iSiteId" Nullable="false" />
+          <Property Type="Int32" Name="iAlternateLangId" Nullable="false" />
+          <Property Type="String" Name="vchSecondaryId" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="iHierarchyId" Nullable="false" />
+          <Property Type="String" Name="vchDescription" Nullable="false" MaxLength="103" />
+          <Property Type="String" Name="vchUser1" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="vchUser2" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="vchUser3" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="vchUser4" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="vchUser5" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="vchUser6" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="vchUser7" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="vchUser8" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="vchUser9" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="vchUser10" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="iStockLevel" Nullable="false" />
+          <Property Type="Decimal" Name="mListPrice" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="mCost" Nullable="true" Precision="19" />
+          <Property Type="String" Name="vchSupportType" Nullable="true" MaxLength="15" />
+          <Property Type="Int16" Name="siWarrantyCalls" Nullable="true" />
+          <Property Type="Int16" Name="siWarrantyDays" Nullable="true" />
+          <Property Type="DateTime" Name="dtWarrantyExpDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="vchIncidentProductNumber" Nullable="true" MaxLength="20" />
+          <Property Type="Boolean" Name="bOrderable" Nullable="false" />
+          <Property Type="DateTime" Name="dtFirstShipDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="dtObsoleteDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="iStatusId" Nullable="true" />
+          <Property Type="String" Name="chInsertBy" Nullable="false" MaxLength="10" />
+          <Property Type="DateTime" Name="dtInsertDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="chUpdateBy" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="dtUpdateDate" Nullable="true" Precision="23" />
+          <Property Type="Byte" Name="tiRecordStatus" Nullable="false" />
+          <Property Type="DateTime" Name="dtModifiedDate" Nullable="true" Precision="16" />
+        </ComplexType>
+        <ComplexType Name="CP_ConsultaSerialNumber_Result">
+          <Property Type="String" Name="chProductNumber" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="vchDescription" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="vchSerialNumber" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="CP_LLenarTablaAsuntosModificaron_Result">
+          <Property Type="Int32" Name="iDatosProductoId" Nullable="false" />
+          <Property Type="Int32" Name="iIncidentId" Nullable="false" />
+          <Property Type="DateTime" Name="dtFechaModificacion" Nullable="false" Precision="23" />
+          <Property Type="String" Name="vchDesc1" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="vchParameterDesc" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="vchParameterDescProducto" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="CP_ParametrosXProducto_ProductNumber_Result">
+          <Property Type="String" Name="chProductNumber" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="chCampo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="vchEtiqueta" Nullable="false" MaxLength="255" />
+          <Property Type="String" Name="chTipo" Nullable="false" MaxLength="1" />
+          <Property Type="Int32" Name="iTamaño" Nullable="true" />
+          <Property Type="Boolean" Name="bIDInterfase" Nullable="false" />
+          <Property Type="Int32" Name="iPosicionInterfase" Nullable="true" />
+          <Property Type="String" Name="vchMascara" Nullable="true" MaxLength="255" />
+          <Property Type="Boolean" Name="bObligatorioVenta" Nullable="true" />
+          <Property Type="Boolean" Name="bObligatorioAtencion" Nullable="true" />
+          <Property Type="Boolean" Name="bObligatorioOT" Nullable="true" />
+          <Property Type="Boolean" Name="bEditableVenta" Nullable="true" />
+          <Property Type="Boolean" Name="bEditableAtencion" Nullable="true" />
+          <Property Type="Boolean" Name="bEditableOT" Nullable="true" />
+          <Property Type="String" Name="cValidarRepetidos" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="chCampoPadre" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="iOrden" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OnyxModelStoreContainer" CdmEntityContainer="OnyxEntities" >
+          <FunctionImportMapping FunctionImportName="CP_InsertarDatosProducto" FunctionName="OnyxModel.Store.CP_InsertarDatosProducto" />
+          <FunctionImportMapping FunctionImportName="CP_CONSULTARDATOSPRODUCTO" FunctionName="OnyxModel.Store.CP_CONSULTARDATOSPRODUCTO">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="OnyxModel.CP_CONSULTARDATOSPRODUCTO_Result">
+                <ScalarProperty Name="IPRODUCTID" ColumnName="IPRODUCTID" />
+                <ScalarProperty Name="BENVIOPUBLICOLOCAL" ColumnName="BENVIOPUBLICOLOCAL" />
+                <ScalarProperty Name="BENVIOPUBLICOLD" ColumnName="BENVIOPUBLICOLD" />
+                <ScalarProperty Name="BENVIOCORPLOCAL" ColumnName="BENVIOCORPLOCAL" />
+                <ScalarProperty Name="BENVIOCORPLD" ColumnName="BENVIOCORPLD" />
+                <ScalarProperty Name="VCHCOMENTARIOS" ColumnName="VCHCOMENTARIOS" />
+                <ScalarProperty Name="TIRECORDSTATUS" ColumnName="TIRECORDSTATUS" />
+                <ScalarProperty Name="IVENTAID" ColumnName="IVENTAID" />
+                <ScalarProperty Name="ICOMPANYID" ColumnName="ICOMPANYID" />
+                <ScalarProperty Name="VCHCOMPANYNAME" ColumnName="VCHCOMPANYNAME" />
+                <ScalarProperty Name="ICOMPANYIDLOCAL" ColumnName="ICOMPANYIDLOCAL" />
+                <ScalarProperty Name="VCHCOMPANYNAMELOCAL" ColumnName="VCHCOMPANYNAMELOCAL" />
+                <ScalarProperty Name="VCHDATAVALUECIUDAD" ColumnName="VCHDATAVALUECIUDAD" />
+                <ScalarProperty Name="VCHPARAMETERDESCCIUDAD" ColumnName="VCHPARAMETERDESCCIUDAD" />
+                <ScalarProperty Name="IESTRATOCIUDADID" ColumnName="IESTRATOCIUDADID" />
+                <ScalarProperty Name="VCHNOMBREESTRATO" ColumnName="VCHNOMBREESTRATO" />
+                <ScalarProperty Name="IUSOSERVICIOID" ColumnName="IUSOSERVICIOID" />
+                <ScalarProperty Name="VCHDESCRIPCIONUSO" ColumnName="VCHDESCRIPCIONUSO" />
+                <ScalarProperty Name="VCHCODIGOREGION" ColumnName="VCHCODIGOREGION" />
+                <ScalarProperty Name="TIPOTELEFONIA" ColumnName="TIPOTELEFONIA" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="CP_ConsultarClienteTelefonia" FunctionName="OnyxModel.Store.CP_ConsultarClienteTelefonia">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="OnyxModel.CP_ConsultarClienteTelefonia_Result">
+                <ScalarProperty Name="iCompanyId" ColumnName="iCompanyId" />
+                <ScalarProperty Name="vchGrupoCentrex" ColumnName="vchGrupoCentrex" />
+                <ScalarProperty Name="vchCallSource" ColumnName="vchCallSource" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="CP_LogErrorTabTelefonia_Insertar" FunctionName="OnyxModel.Store.CP_LogErrorTabTelefonia_Insertar" />
+          <FunctionImportMapping FunctionImportName="CP_ConsultarUso" FunctionName="OnyxModel.Store.CP_ConsultarUso">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="OnyxModel.CP_ConsultarUso_Result">
+                <ScalarProperty Name="iEstratoID" ColumnName="iEstratoID" />
+                <ScalarProperty Name="vchDescripcion" ColumnName="vchDescripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="CP_ACTUALIZARDATOSPRODUCTO" FunctionName="OnyxModel.Store.CP_ACTUALIZARDATOSPRODUCTO" />
+          <FunctionImportMapping FunctionImportName="CRMCP_BuscarTelefonia" FunctionName="OnyxModel.Store.CRMCP_BuscarTelefonia" />
+          <FunctionImportMapping FunctionImportName="CP_Cuenta_Incident_iIncidentId" FunctionName="OnyxModel.Store.CP_Cuenta_Incident_iIncidentId" />
+          <FunctionImportMapping FunctionImportName="CP_DatosProductoIncident_iIncidentId" FunctionName="OnyxModel.Store.CP_DatosProductoIncident_iIncidentId" />
+          <FunctionImportMapping FunctionImportName="CP_iIncidentCategory_Incident_iIncidentId" FunctionName="OnyxModel.Store.CP_iIncidentCategory_Incident_iIncidentId" />
+          <FunctionImportMapping FunctionImportName="CP_iOwnerId_Incident_iIncidentId" FunctionName="OnyxModel.Store.CP_iOwnerId_Incident_iIncidentId" />
+          <FunctionImportMapping FunctionImportName="CP_iStatusId_Incident_iIncidentId" FunctionName="OnyxModel.Store.CP_iStatusId_Incident_iIncidentId" />
+          <FunctionImportMapping FunctionImportName="CP_Product_Master_iIncidentId" FunctionName="OnyxModel.Store.CP_Product_Master_iIncidentId">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="OnyxModel.CP_Product_Master_iIncidentId_Result">
+                <ScalarProperty Name="chProductNumber" ColumnName="chProductNumber" />
+                <ScalarProperty Name="iSiteId" ColumnName="iSiteId" />
+                <ScalarProperty Name="iAlternateLangId" ColumnName="iAlternateLangId" />
+                <ScalarProperty Name="vchSecondaryId" ColumnName="vchSecondaryId" />
+                <ScalarProperty Name="iHierarchyId" ColumnName="iHierarchyId" />
+                <ScalarProperty Name="vchDescription" ColumnName="vchDescription" />
+                <ScalarProperty Name="vchUser1" ColumnName="vchUser1" />
+                <ScalarProperty Name="vchUser2" ColumnName="vchUser2" />
+                <ScalarProperty Name="vchUser3" ColumnName="vchUser3" />
+                <ScalarProperty Name="vchUser4" ColumnName="vchUser4" />
+                <ScalarProperty Name="vchUser5" ColumnName="vchUser5" />
+                <ScalarProperty Name="vchUser6" ColumnName="vchUser6" />
+                <ScalarProperty Name="vchUser7" ColumnName="vchUser7" />
+                <ScalarProperty Name="vchUser8" ColumnName="vchUser8" />
+                <ScalarProperty Name="vchUser9" ColumnName="vchUser9" />
+                <ScalarProperty Name="vchUser10" ColumnName="vchUser10" />
+                <ScalarProperty Name="iStockLevel" ColumnName="iStockLevel" />
+                <ScalarProperty Name="mListPrice" ColumnName="mListPrice" />
+                <ScalarProperty Name="mCost" ColumnName="mCost" />
+                <ScalarProperty Name="vchSupportType" ColumnName="vchSupportType" />
+                <ScalarProperty Name="siWarrantyCalls" ColumnName="siWarrantyCalls" />
+                <ScalarProperty Name="siWarrantyDays" ColumnName="siWarrantyDays" />
+                <ScalarProperty Name="dtWarrantyExpDate" ColumnName="dtWarrantyExpDate" />
+                <ScalarProperty Name="vchIncidentProductNumber" ColumnName="vchIncidentProductNumber" />
+                <ScalarProperty Name="bOrderable" ColumnName="bOrderable" />
+                <ScalarProperty Name="dtFirstShipDate" ColumnName="dtFirstShipDate" />
+                <ScalarProperty Name="dtObsoleteDate" ColumnName="dtObsoleteDate" />
+                <ScalarProperty Name="iStatusId" ColumnName="iStatusId" />
+                <ScalarProperty Name="chInsertBy" ColumnName="chInsertBy" />
+                <ScalarProperty Name="dtInsertDate" ColumnName="dtInsertDate" />
+                <ScalarProperty Name="chUpdateBy" ColumnName="chUpdateBy" />
+                <ScalarProperty Name="dtUpdateDate" ColumnName="dtUpdateDate" />
+                <ScalarProperty Name="tiRecordStatus" ColumnName="tiRecordStatus" />
+                <ScalarProperty Name="dtModifiedDate" ColumnName="dtModifiedDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="CP_ConsultaSerialNumber" FunctionName="OnyxModel.Store.CP_ConsultaSerialNumber">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="OnyxModel.CP_ConsultaSerialNumber_Result">
+                <ScalarProperty Name="chProductNumber" ColumnName="chProductNumber" />
+                <ScalarProperty Name="vchDescription" ColumnName="vchDescription" />
+                <ScalarProperty Name="vchSerialNumber" ColumnName="vchSerialNumber" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="CP_ConsultaGrupoCentrex" FunctionName="OnyxModel.Store.CP_ConsultaGrupoCentrex" />
+          <FunctionImportMapping FunctionImportName="CP_ConsultavchCallSource" FunctionName="OnyxModel.Store.CP_ConsultavchCallSource" />
+          <FunctionImportMapping FunctionImportName="CP_LLenarTablaAsuntosModificaron" FunctionName="OnyxModel.Store.CP_LLenarTablaAsuntosModificaron">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="OnyxModel.CP_LLenarTablaAsuntosModificaron_Result">
+                <ScalarProperty Name="iDatosProductoId" ColumnName="iDatosProductoId" />
+                <ScalarProperty Name="iIncidentId" ColumnName="iIncidentId" />
+                <ScalarProperty Name="dtFechaModificacion" ColumnName="dtFechaModificacion" />
+                <ScalarProperty Name="vchDesc1" ColumnName="vchDesc1" />
+                <ScalarProperty Name="vchParameterDesc" ColumnName="vchParameterDesc" />
+                <ScalarProperty Name="vchParameterDescProducto" ColumnName="vchParameterDescProducto" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="CP_ParametrosXProducto_ProductNumber" FunctionName="OnyxModel.Store.CP_ParametrosXProducto_ProductNumber">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="OnyxModel.CP_ParametrosXProducto_ProductNumber_Result">
+                <ScalarProperty Name="chProductNumber" ColumnName="chProductNumber" />
+                <ScalarProperty Name="chCampo" ColumnName="chCampo" />
+                <ScalarProperty Name="vchEtiqueta" ColumnName="vchEtiqueta" />
+                <ScalarProperty Name="chTipo" ColumnName="chTipo" />
+                <ScalarProperty Name="iTamaño" ColumnName="iTamaño" />
+                <ScalarProperty Name="bIDInterfase" ColumnName="bIDInterfase" />
+                <ScalarProperty Name="iPosicionInterfase" ColumnName="iPosicionInterfase" />
+                <ScalarProperty Name="vchMascara" ColumnName="vchMascara" />
+                <ScalarProperty Name="bObligatorioVenta" ColumnName="bObligatorioVenta" />
+                <ScalarProperty Name="bObligatorioAtencion" ColumnName="bObligatorioAtencion" />
+                <ScalarProperty Name="bObligatorioOT" ColumnName="bObligatorioOT" />
+                <ScalarProperty Name="bEditableVenta" ColumnName="bEditableVenta" />
+                <ScalarProperty Name="bEditableAtencion" ColumnName="bEditableAtencion" />
+                <ScalarProperty Name="bEditableOT" ColumnName="bEditableOT" />
+                <ScalarProperty Name="cValidarRepetidos" ColumnName="cValidarRepetidos" />
+                <ScalarProperty Name="chCampoPadre" ColumnName="chCampoPadre" />
+                <ScalarProperty Name="iOrden" ColumnName="iOrden" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

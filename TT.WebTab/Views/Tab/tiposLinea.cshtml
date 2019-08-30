@@ -1,0 +1,115 @@
+﻿@model TT.WebTab.Models.DetalleDatosProductoModel
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/Content/bootstrap.css")
+
+
+@{Layout = null; }
+<div class="container estilo-letra">
+    <nav>
+        <div class="nav nav-pills" id="pills-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-TiposLinea-tab" data-toggle="tab" href="#nav-TiposLinea" role="tab" aria-controls="nav-TiposLinea" aria-selected="true">Tipos de Linea</a>
+            <a class="nav-item nav-link " id="nav-NumeracionPublica-tab" data-toggle="tab" href="#nav-NumeracionPublica" role="tab" aria-controls="nav-NumeracionPublica" aria-selected="false">Numeración Publica</a>
+        </div>
+    </nav>
+
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-TiposLinea" role="tabpanel" aria-labelledby="nav-TiposLinea-tab">
+            <div class="row">
+                <div class="col-md-5">
+                    <h6 class="text-danger p-3">TIPOS DE LINEA ACTUALES EN EL CLIENTE</h6>
+                </div>
+                @using (Html.BeginForm("PostTiposLinea", "Tab", FormMethod.Post))
+                {
+                    <div class="col-md-5 row">
+                        @Html.LabelFor(model => model._TiposLinea.CallSource, htmlAttributes: new { @class = "col-form-label  col-md-5", @style = "width: 100%;" })
+                        <div class="col-md-7">
+                            @Html.EditorFor(model => model._TiposLinea.CallSource, new { htmlAttributes = new { @class = "form-control input-call-source" } })
+                            @Html.ValidationMessageFor(model => model._TiposLinea.CallSource, "", new { @class = "text-danger" })
+                            <div class="div-call-source div-hide" on,>
+                                @Html.Label("Numeros Call Source que se encuentran en uso")
+                                @foreach (var item in Model._TiposLinea.AuxCallSource)
+                                {
+                                    <p>@item</p>
+                                }
+                            </div>
+                        </div>
+                        <br />
+                        @Html.LabelFor(model => model._TiposLinea.GrupoCentrex, htmlAttributes: new { @class = "col-form-label col-md-5" })
+                        <div class="col-md-7">
+                            @*@Html.DropDownListFor(model => model._TiposLinea.IdGrupoCentrex, Model._TiposLinea.GrupoCentrex, htmlAttributes: new { @class = "form-control" } )*@
+                            @Html.EditorFor(model => model._TiposLinea.GrupoCentrex, new { htmlAttributes = new { @class = "form-control input-grupo-centrex" } })
+                            @Html.ValidationMessageFor(model => model._TiposLinea.GrupoCentrex, "", new { @class = "text-danger" })
+                            <div class="div-grupo-centrex div-hide" on,>
+                                @Html.Label("Numeros Grupo Centrex que se encuentran en uso")
+                                @foreach (var item in Model._TiposLinea.AuxGrupoCentrex)
+                                {
+                                    <div>@item</div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 row text-center">
+                        <input type="submit" value="Guardar" class="btn degrade-azul btn-sombra" />
+                        <input type="submit" value="Liberar Recurso" class="btn  degrade-azul btn-sombra" />
+                    </div>
+                }
+            </div>
+
+            @Html.Partial("_TablaTiposLinea", Model)
+
+            <div class="p-5"></div>
+            <div class="row ">
+                <div class="col-md-7 row">
+                    @Html.LabelFor(model => model._TiposLineaEdicion.IdProducto, htmlAttributes: new { @class = "col-form-label col-md-3 bg-red rounded text-white" })
+                    <div class="col-md-3">
+                        @Html.EditorFor(model => model._TiposLineaEdicion.IdProducto, new { htmlAttributes = new { @class = "form-control", disabled = true } })
+                    </div>
+                    <div class="col-md-6">
+                        @Html.EditorFor(model => model._TiposLineaEdicion.NombreProducto, new { htmlAttributes = new { @class = "form-control", disabled = true } })
+                    </div>
+
+                </div>
+                <div class="col-md-5 row">
+                    @Html.LabelFor(model => model._TiposLineaEdicion.IdVenta, "Incidente que esta modificando", htmlAttributes: new { @class = "col-form-label col-md-8 bg-red rounded text-white" })
+                    <div class="col-md-4">
+                        @Html.EditorFor(model => model._TiposLineaEdicion.IdVenta, new { htmlAttributes = new { @class = "form-control", disabled = true } })
+                    </div>
+
+                </div>
+            </div>
+
+            @Html.Partial("_TablaTiposLinea")
+
+            <div class="row">
+                @Html.ActionLink("Agregar tipo de linea", "ConfigurarTipoLinea", null, null, new { @class = "btn btn-outline-danger btn-redondo btn-sombra" })
+            </div>
+        </div>
+        <div class="tab-pane fade" id="nav-NumeracionPublica" role="tabpanel" aria-labelledby="nav-NumeracionPublica-tab">
+
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.0.0.min.js"></script>
+<script>
+
+    $('.input-grupo-centrex').on('focusin', function () {
+        $('.div-grupo-centrex').addClass('div-show');
+        $('.div-grupo-centrex').removeClass('div-hide');
+    });
+
+    $('.div-grupo-centrex').on('blur', function () {
+        $('.div-grupo-centrex').removeClass('div-show');
+        $('.div-grupo-centrex').addClass('div-hide');
+    });
+
+    $('.input-call-source').on('focusin', function () {
+        $('.div-call-source').addClass('div-show');
+        $('.div-call-source').removeClass('div-hide');
+    });
+
+    $('.div-call-source').on('blur', function () {
+        $('.div-call-source').removeClass('div-show');
+        $('.div-call-source').addClass('div-hide');
+    });
+
+</script>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:ns0="http://www.amx.com/Schema/Operation/updateNumbers/V1.0" xmlns:clhe="http://www.amx.com/CO/Schema/ClaroHeaders/v1" elementFormDefault="qualified" targetNamespace="http://www.amx.com/Schema/Operation/updateNumbers/V1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://172.24.42.211:8002/NetCracker/V2.0?SCHEMA%2FUT_DataModel%2FEntities%2FCommonBusiness%2FClaroHeaders" namespace="http://www.amx.com/CO/Schema/ClaroHeaders/v1" />
+  <xsd:annotation>
+    <xsd:documentation> 
+          
+      Author: Daniel Bustacara
+      email: lbustacara@soaint.com
+      Date: 04/01/2018
+      Version: 1.0
+      Purpose: Operation updateNumbers
+      Track changes: Creation. Released first version
+      Observations: 
+      
+  </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="updateNumbers" type="ns0:updateNumbers_TYPE" />
+  <xsd:complexType name="updateNumbers_TYPE">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="headerRequest" type="clhe:HeaderRequest" />
+      <xsd:element minOccurs="0" name="crm_in_use" type="xsd:string" />
+      <xsd:element minOccurs="0" name="request_id" type="xsd:string" />
+      <xsd:element minOccurs="0" name="transaction_id" type="xsd:string" />
+      <xsd:element minOccurs="0" name="country_code" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="area_code" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="status" type="xsd:string" />
+      <xsd:element minOccurs="0" name="order_number" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="customer_name" type="xsd:string" />
+      <xsd:element minOccurs="0" name="service_id" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="customer_id" type="xsd:string" />
+      <xsd:element minOccurs="0" name="customer_id_type" type="xsd:string" />
+      <xsd:element minOccurs="0" name="account_id" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="customer_location" type="xsd:string" />
+      <xsd:element minOccurs="0" name="consultant" type="xsd:string" />
+      <xsd:element minOccurs="0" name="service_order_number" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="service_order_type" type="xsd:string" />
+      <xsd:element minOccurs="0" name="contract" type="xsd:string" />
+      <xsd:element minOccurs="0" name="supplementary_services" type="ns0:ArrayOfServices" />
+      <xsd:element minOccurs="0" name="disconnection_reason" type="xsd:string" />
+      <xsd:element minOccurs="0" name="city_code" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="category" type="xsd:string" />
+      <xsd:element minOccurs="0" name="in_service_date" type="xsd:date" />
+      <xsd:element minOccurs="0" name="quarantine_date" type="xsd:date" />
+      <xsd:element minOccurs="0" name="list_of_numbers" type="ns0:ArrayOfNumberElements" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ArrayOfServices">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="s_service" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ArrayOfNumberElements">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="number_element" type="ns0:NumberElement" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="NumberElement">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="number" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="city_code" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="metropolitan_area" type="xsd:string" />
+      <xsd:element minOccurs="0" name="service_in_use" type="xsd:string" />
+      <xsd:element minOccurs="0" name="service_id" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="supplementary_services" type="ns0:ArrayOfServices" />
+      <xsd:element minOccurs="0" name="customer_name" type="xsd:string" />
+      <xsd:element minOccurs="0" name="customer_id" type="xsd:string" />
+      <xsd:element minOccurs="0" name="customer_id_type" type="xsd:string" />
+      <xsd:element minOccurs="0" name="account_id" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="customer_location" type="xsd:string" />
+      <xsd:element minOccurs="0" name="status" type="xsd:string" />
+      <xsd:element minOccurs="0" name="service_order_number" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="order_number" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="category" type="xsd:string" />
+      <xsd:element minOccurs="0" name="consultant" type="xsd:string" />
+      <xsd:element minOccurs="0" name="inservice_date" type="xsd:date" />
+      <xsd:element minOccurs="0" name="quarantine_date" type="xsd:date" />
+      <xsd:element minOccurs="0" name="disconnection_date" type="xsd:date" />
+      <xsd:element minOccurs="0" name="reservation_date" type="xsd:date" />
+      <xsd:element minOccurs="0" name="quarantine_due_date" type="xsd:date" />
+      <xsd:element minOccurs="0" name="reservation_due_date" type="xsd:date" />
+      <xsd:element minOccurs="0" name="disconnection_reason" type="xsd:string" />
+      <xsd:element minOccurs="0" name="corresponding_numbers" type="ns0:ArrayOfCorrespondingNumbers" />
+      <xsd:element minOccurs="0" name="core_network_element" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ArrayOfCorrespondingNumbers">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="number" type="xsd:integer" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="updateNumbersResp" type="ns0:updateNumbersResp_TYPE" />
+  <xsd:complexType name="updateNumbersResp_TYPE">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="transaction_id" type="xsd:string" />
+      <xsd:element minOccurs="0" name="code" type="xsd:integer" />
+      <xsd:element minOccurs="0" name="description" type="xsd:string" />
+      <xsd:element minOccurs="0" name="operation_date" type="xsd:date" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
